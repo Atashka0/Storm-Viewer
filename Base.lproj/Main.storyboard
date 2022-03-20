@@ -49,26 +49,26 @@
         <!--Detail View Controller-->
         <scene sceneID="swb-4Y-gS4">
             <objects>
-                <viewController storyboardIdentifier="Detail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B6d-hf-Mu3" customClass="DetailViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Detail" id="B6d-hf-Mu3" customClass="DetailViewController" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j9k-Vh-nYz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0EM-hX-1Cp">
-                                <rect key="frame" x="-16" y="0.0" width="430" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqe-P2-K8S">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="msu-Id-orM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0EM-hX-1Cp" firstAttribute="top" secondItem="j9k-Vh-nYz" secondAttribute="topMargin" constant="-44" id="FB8-4m-fGJ"/>
-                            <constraint firstItem="0EM-hX-1Cp" firstAttribute="trailing" secondItem="msu-Id-orM" secondAttribute="trailing" id="GcC-UO-CQ7"/>
-                            <constraint firstItem="0EM-hX-1Cp" firstAttribute="centerY" secondItem="j9k-Vh-nYz" secondAttribute="centerY" id="Gt9-LQ-cgE"/>
-                            <constraint firstItem="0EM-hX-1Cp" firstAttribute="leading" secondItem="j9k-Vh-nYz" secondAttribute="leadingMargin" constant="-36" id="jB4-of-uIe"/>
+                            <constraint firstItem="eqe-P2-K8S" firstAttribute="centerX" secondItem="j9k-Vh-nYz" secondAttribute="centerX" id="5zT-aC-Hhz"/>
+                            <constraint firstItem="eqe-P2-K8S" firstAttribute="leading" secondItem="msu-Id-orM" secondAttribute="leading" id="K7I-h6-Mgd"/>
+                            <constraint firstItem="eqe-P2-K8S" firstAttribute="top" secondItem="j9k-Vh-nYz" secondAttribute="topMargin" constant="-44" id="Oth-kG-W8b"/>
+                            <constraint firstItem="eqe-P2-K8S" firstAttribute="centerY" secondItem="j9k-Vh-nYz" secondAttribute="centerY" id="tyT-0S-aIx"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="0EM-hX-1Cp" id="0GN-24-IPZ"/>
+                        <outlet property="imageView" destination="eqe-P2-K8S" id="fmd-0W-8MX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEt-gr-gET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

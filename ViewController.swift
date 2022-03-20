@@ -13,7 +13,10 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Storm Viewer"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = false
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share app", style: .plain, target: self, action: #selector(suggest))
+       
         // Do any additional setup after loading the view.
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
@@ -44,11 +47,19 @@ class ViewController: UITableViewController {
             vc.selectedImage = pictures[indexPath.row]
             vc.selectedPictureNumber = indexPath.row + 1
             vc.totalPictures = pictures.count
+            vc.names = pictures
             // 3: now push it onto the navigation controller
             navigationController?.pushViewController(vc, animated: true)
         }
+        
+        }
+    @objc func suggest() {
+        let shareLink = "Try it: https://github.com/Atashka0/Storm_Viewer"
+        let vc = UIActivityViewController(activityItems: [shareLink], applicationActivities: [])
+        vc.popoverPresentationController?.barButtonItem = navigationItem.rightBarButtonItem
+        present(vc, animated: true)
+        
     }
-    
     
    
 
